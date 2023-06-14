@@ -111,4 +111,58 @@ obrázky a jeden rozdílný -> Kždy například vezmu první stři levé čvere
 kde budou například kombinace "mouth", "mouth", "eyes" nebo "mouth", "eyes", "mouth", nebo "eyes", "mouth", "mouth" nebo
 "eyes", "eyes", "mouth", nebo "eyes", "mouth", "eyes", nebo "mouth", "eyes", "eyes". No a s tím, co jsme dělali v minulých krocích by jsme měli být schopní
 doplnit vzor, který do trojice zbývá a pak znovu pokračovat s naším úplně prvním algoritmem.
+
+2. Pokus
+Snažil jsem se vyvrátit to, že když vybere podobu čverečku, který je vlevém horním rohu, tak musím zvolit zrcadlový čvereček pravého dolního rohu, aby celá 
+mřížka potom vyšla jak má. To se povedlo. Je totiž v podststě jedno jestli čtvereček bude zrcadlový nebo ne, zaleží totiž jen na tom, jak doplníme prostředky 
+vnějšího rámečku. Můžeme si tedy zvolit jaký chceme čvereček v pravém horním rohu a to samé v levém dolním rohu, ale záleží jen na tom, jak potom doplníme 
+prostřední okraje vnějších stran -> ty už opravdu musí být podle pravidla, kterého jsem říkal v prvním pokusu. Vždycky dva stejné obrazce a jeden rozlišný -> doplňujeme chybějící.
+V případě, že v levém dolní čverečku dolního prostředního prvku bude jiný obrázek než na pravém dolním čverečku spodního prostředního prvku, tak si můžeme vybrat.
+
+3. Pokus
+Zjistil jsem, že si v podstatě vystačíme jen s tímto:
+
+#left                           #right
+["mouth", "mouth", "eyes"]      ["eyes", "eyes", "mouth"]
+["mouth", "eyes", "mouth"]      ["eyes", "mouth", "eyes"]
+["eyes", "mouth", "mouth"]      ["mouth", "eyes", "eyes"]
+
+Konkrétně potom s kombinacemi:
+
+#start with left
+
+["mouth", "mouth", "eyes"]
+    ["eyes", "eyes", "mouth"]
+    ["eyes", "mouth", "eyes"]
+    ["mouth", "eyes", "eyes"]
+
+["mouth", "eyes", "mouth"]
+    ["eyes", "eyes", "mouth"]
+    ["eyes", "mouth", "eyes"]
+    ["mouth", "eyes", "eyes"]
+
+["eyes", "mouth", "mouth"]
+    ["eyes", "eyes", "mouth"]
+    ["eyes", "mouth", "eyes"]
+    ["mouth", "eyes", "eyes"]
+
+#start with right
+
+["eyes", "eyes", "mouth"]
+    ["mouth", "mouth", "eyes"] 
+    ["mouth", "eyes", "mouth"]
+    ["eyes", "mouth", "mouth"]
+
+["eyes", "mouth", "eyes"]
+    ["mouth", "mouth", "eyes"]
+    ["mouth", "eyes", "mouth"]
+    ["eyes", "mouth", "mouth"]
+
+["mouth", "eyes", "eyes"]
+    ["mouth", "mouth", "eyes"] 
+    ["mouth", "eyes", "mouth"]
+    ["eyes", "mouth", "mouth"]
+
+Celkově tedy může vyjít 18 různých obrázku, které všechny udou mít smajlíky.
+
 """
