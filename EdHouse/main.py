@@ -68,10 +68,24 @@ Poznatky:
     
 + Vždy jsou v každém čverečku dva páry očí a dvě pusy.
 + Vždy jsou pusy vedle sebe a páry očí vedle sebe -> nikdy se nestane, že by pusa byla naproti puse a páry oči byly naproti sobě.
+---------Barvy---------
 + Červených polovin = 9
-+ Modrých polovin = 10
 + Zelených polovin = 8
++ Modrých polovin = 10
 + Žlutých polovin = 9
+------Barvy částí------
++ Červených očí = 3
++ Červených úst = 6
+
++ Zelených očí = 5
++ Zelených úst = 3
+
++ Modrých očí = 5
++ Modrých úst = 5
+
++ Žlutých očí = 5
++ Žlutých úst = 4
+-----------------------
 + Zatím nevím, zdali-li se má řešit otáčením jednotlivých čverečků aby na sebe obličeje pasovaly jak barvou, tak i jako tváří nebo pohybem jednotlivých čverečů či kombinací obou.
 
 Pokusy:
@@ -97,7 +111,4 @@ obrázky a jeden rozdílný -> Kždy například vezmu první stři levé čvere
 kde budou například kombinace "mouth", "mouth", "eyes" nebo "mouth", "eyes", "mouth", nebo "eyes", "mouth", "mouth" nebo
 "eyes", "eyes", "mouth", nebo "eyes", "mouth", "eyes", nebo "mouth", "eyes", "eyes". No a s tím, co jsme dělali v minulých krocích by jsme měli být schopní
 doplnit vzor, který do trojice zbývá a pak znovu pokračovat s naším úplně prvním algoritmem.
-
-
-
 """
